@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = 'utf-8'>
+</head>
+
+<body>
+<script>
+
 var array = [];
 var length = 40; 
 
@@ -6,12 +15,12 @@ var max = 99;
 var temp;
 var num;
 
-//функция массива
+//С„СѓРЅРєС†РёСЏ РјР°СЃСЃРёРІР°
 function outArr(min, max)
 {
 	for (var i = 0; i < length; i++)
 	{
-		temp = Number(Math.round(min + (Math.random() * max))); 	//заполняем рандомом
+		temp = Number(Math.round(min + (Math.random() * max))); 	//Р·Р°РїРѕР»РЅСЏРµРј СЂР°РЅРґРѕРјРѕРј
 		array[i] = temp;
 	}
 	document.write(array);
@@ -19,7 +28,7 @@ function outArr(min, max)
 }
 
 
-//функция объекта
+//С„СѓРЅРєС†РёСЏ РѕР±СЉРµРєС‚Р°
 function outObj(array)
 {
 	var obj = {};
@@ -53,7 +62,19 @@ document.write("<br><br>");
 		}
 	}
 
-	document.write(JSON.stringify(obj));	//переводим в строку
+	for (var i in obj)
+	{
+		//obj[i].unshift("<br>");
+		//obj[i].splice("],", 5,  "<br>");
+
+		//obj[i].push("Р·Р°РјРµРЅРёРјРµРЅСЏ");
+	}
+	document.write(JSON.stringify(obj));	//РїРµСЂРµРІРѕРґРёРј РІ СЃС‚СЂРѕРєСѓ
 }
 	var arr = outArr(min, max);
 	outObj(arr);
+
+</script>
+</body>
+</html>
+   В 
