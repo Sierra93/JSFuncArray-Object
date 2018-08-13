@@ -1,0 +1,59 @@
+var array = [];
+var length = 40; 
+
+var min = 1; 
+var max = 99; 
+var temp;
+var num;
+
+//функция массива
+function outArr(min, max)
+{
+	for (var i = 0; i < length; i++)
+	{
+		temp = Number(Math.round(min + (Math.random() * max))); 	//заполняем рандомом
+		array[i] = temp;
+	}
+	document.write(array);
+	return array;
+}
+
+
+//функция объекта
+function outObj(array)
+{
+	var obj = {};
+	obj['0-5'] = [];
+	obj['30-50'] = [];
+	obj['50-80'] = [];
+	obj['80-100'] = [];
+
+document.write("<br><br>");
+
+	for (var i = 0; i < array[i]; i++)
+	{
+		if (array[i] <= 30)
+		{
+			obj['0-5'].push(array[i]);
+		}
+
+		else if (array[i] >= 30 && array[i] <= 50)
+		{
+			obj['30-50'].push(array[i]);
+		}
+
+		else if (array[i] > 50 && array[i] <= 80)
+		{
+			obj['50-80'].push(array[i]);	
+		}
+
+		else 
+		{
+			obj['80-100'].push(array[i]);	
+		}
+	}
+
+	document.write(JSON.stringify(obj));	//переводим в строку
+}
+	var arr = outArr(min, max);
+	outObj(arr);
